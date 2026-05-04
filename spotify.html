@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify</title>
+    <link rel="icon" href="spotify.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="left">
+        <img src="spotify.png" alt="Spotify Logo" class="logo" height="25" width="25">
+        <input type="text" placeholder="What do you want to play?">
+    </div>
+
+    <div class="right">
+        <a href="https://www.spotify.com/in-en/premium/">Premium</a>
+        <a href="https://support.spotify.com/in-en/">Support</a>
+        <a href="https://www.spotify.com/in-en/download/">Download</a>
+        <a href="login.html">
+            <button class="login">Log in</button>
+        </a>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="library">
+        <h3>Your Library</h3>
+
+        <div class="box">
+            <p>Create your first playlist</p>
+            <button>Create playlist</button>
+        </div>
+
+        <div class="box">
+            <p>Let's find some podcasts</p>
+        </div>
+
+        <div class="footer-links">
+            <p><a href="https://www.spotify.com/in-en/legal/">Legal</a></p>
+            <p><a href="https://www.spotify.com/in-en/safety-and-privacy-center/">Safety & Privacy Center</a></p>
+            <p><a href="https://www.spotify.com/in-en/privacy-policy/">Privacy Policy</a></p>
+            <p><a href="https://www.spotify.com/in-en/cookies/">Cookies</a></p>
+            <p><a href="https://www.spotify.com/in-en/about-ads/">About Ads</a></p>
+            <p><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></p>
+            <button class="lang-btn">🌐 English</button>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <!-- TRENDING -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Trending songs</h2>
+                <a href="https://open.spotify.com/section/0JQ5DB5E8N831KzFzsBBQ2">Show all</a>
+            </div>
+            <div class="cards" id="cards"></div>
+        </div>
+        <div class="section">
+            <div class="section-header">
+                <h2>Popular artists</h2>
+                <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu3C">Show all</a>
+             </div>
+             <div class="artists" id="artists"></div>
+        </div>
+
+        <!-- ALBUMS -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Popular albums & singles</h2>
+                <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu3B">Show all</a>
+            </div>
+            <div class="cards" id="albums"></div>
+        </div>
+
+        <!-- RADIO -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Popular radio</h2>
+                <a href="https://open.spotify.com/section/0JQ5DAnM3wGh0gz1MXnu4h">Show all</a>
+            </div>
+            <div class="cards" id="radio"></div>
+        </div>
+
+        <!-- CHARTS -->
+        <div class="section">
+            <div class="section-header">
+                <h2>Featured charts</h2>
+                <a href="https://open.spotify.com/section/0JQ5DAzQHECxDlYNI6xD1g">Show all</a>
+            </div>
+            <div class="cards" id="charts"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-cols">
+                <div>
+                    <h4>Company</h4>
+                    <p><a href="https://www.spotify.com/in-en/about/">About</a></p>
+                    <p><a href="https://www.spotify.com/in-en/jobs/">Jobs</a></p>
+                    <p><a href="https://www.spotify.com/in-en/for-the-record/">For the Record</a></p>
+                </div>
+                <div>
+                    <h4>Communities</h4>
+                    <p><a href="https://www.spotify.com/in-en/for-artists/">For Artists</a></p>
+                    <p><a href="https://developer.spotify.com/">Developers</a></p>
+                    <p><a href="https://www.spotify.com/in-en/ads/">Advertising</a></p>
+                    <p><a href="https://www.spotify.com/in-en/investors/">Investors</a></p>
+                    <p><a href="https://www.spotify.com/in-en/vendors/">Vendors</a></p>
+                </div>
+                <div>
+                    <h4>Useful links</h4>
+                    <p><a href="https://support.spotify.com/in-en/">Support</a></p>
+                    <p><a href="https://www.spotify.com/in-en/download/">Free Mobile App</a></p>
+                    <p><a href="https://www.spotify.com/in-en/popular-by-country/">Popular by Country</a></p>
+                    <p><a href="https://www.spotify.com/in-en/import-your-music/">Import your music</a></p>
+                </div>
+                <div>
+                    <h4>Spotify Plans</h4>
+                    <p><a href="https://www.spotify.com/in-en/premium-lite/">Premium Lite</a></p>
+                    <p><a href="https://www.spotify.com/in-en/premium-standard/">Premium Standard</a></p>
+                    <p><a href="https://www.spotify.com/in-en/premium-platinum/">Premium Platinum</a></p>
+                    <p><a href="https://www.spotify.com/in-en/premium-student/">Premium Student</a></p>
+                    <p><a href="https://www.spotify.com/in-en/spotify-free/">Spotify Free</a></p>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Spotify AB</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- PLAYER -->
+<div class="player">
+    <div id="songName">No song playing</div>
+    <input type="range" id="progress" value="0">
+    <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="playPause()" id="playBtn">▶</button>
+        <button onclick="nextSong()">⏭</button>
+    </div>
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

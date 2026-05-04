@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #121212;
+    color: white;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #000;
+    align-items: center;
+}
+
+.topbar input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+}
+
+.topbar .left .logo {
+    vertical-align: middle;
+    margin-bottom: -2px;
+}
+
+.topbar .right span,
+.topbar .right a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.topbar .right a:hover {
+    color: #1DB954;
+}
+
+.login {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+}
+
+/* LEFT LIBRARY */
+.library {
+    width: 250px;
+    background: #000;
+    padding: 15px;
+}
+
+.box {
+    background: #181818;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card {
+    min-width: 180px;
+    background: #181818;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background: #282828;
+}
+
+/* ARTISTS */
+.artists {
+    display: flex;
+    gap: 20px;
+}
+
+.artist {
+    width: 150px;
+    height: 150px;
+    background: gray;
+    border-radius: 50%;
+}
+
+/* SIGNUP BAR */
+.signup-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, purple, blue);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.signup-bar button {
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.main {
+    flex: 1;
+    padding: 20px;
+    background: linear-gradient(to bottom, #1f1f1f, #121212);
+}
+.card h4 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+.cards {
+    scroll-behavior: smooth;
+}
+/* Smooth UI */
+* {
+    box-sizing: border-box;
+}
+
+/* TOPBAR UPGRADE */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.6);
+}
+
+/* SEARCH BAR */
+.topbar input {
+    background: #242424;
+    color: white;
+}
+
+/* SIDEBAR IMPROVED */
+.library {
+    border-right: 1px solid #282828;
+}
+
+/* CARDS UPGRADE */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card h4 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+/* SPOTIFY STYLE PLAY BUTTON */
+.play-btn {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    background: #1DB954;
+    border-radius: 50%;
+    padding: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s;
+}
+
+/* SHOW ON HOVER */
+.card:hover .play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ARTISTS REAL LOOK */
+.artist {
+    background-size: cover;
+    background-position: center;
+}
+
+/* SCROLL */
+.main {
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+.card.active {
+    border: 2px solid #1DB954;
+}
+.section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-header a,
+.section-header span {
+    color: #b3b3b3;
+    cursor: pointer;
+}
+
+.section-header a:hover,
+.section-header span:hover {
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #121212;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1DB954;
+}
+
+/* TOPBAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: black;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.library {
+    width: 250px;
+    background: black;
+    padding: 15px;
+}
+
+.box {
+    background: #181818;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.footer-links {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.footer-links p:hover {
+    color: white;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    align-items: stretch;
+}
+
+.card {
+    min-width: 180px;
+    max-width: 220px;
+    background: #181818;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.card h4 {
+    margin: 12px 0 6px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 40px;
+}
+
+.footer-cols {
+    display: flex;
+    gap: 50px;
+}
+
+/* PLAYER */
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #181818;
+    text-align: center;
+}
+
+#progress {
+    width: 40%;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+.footer {
+    padding: 40px 20px;
+    background: #000;
+}
+
+.footer-cols {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #b3b3b3;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.footer p:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 30px;
+    color: #777;
+}
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #181818;
+    padding: 10px;
+    text-align: center;
+}
+
+#progress {
+    width: 40%;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.artists {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.artist {
+    min-width: 150px;
+    text-align: center;
+}
+
+.artist img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
